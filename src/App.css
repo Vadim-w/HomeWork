@@ -1,0 +1,17 @@
+
+body {
+    background-color: lightblue;
+}
+
+.demonstration {
+   margin-left: 1000px;
+}
+
+
+.myInput {
+    display: inline-block;
+}
+
+.liTodo {
+    font-size: 30px;
+}
