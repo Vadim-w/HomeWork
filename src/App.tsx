@@ -1,44 +1,26 @@
 import React from 'react';
 import './App.css';
-import Messages from "./Messages/message";
-import Affairs from "./Todolist/Affairs";
-import { InputField } from './InputHello/Input';
-import MyButton from "./Common/Button/MyButton";
-import MyCheckBox from './Common/CheckBox/MyCheckBox';
-import MyInput from './Common/Input/MyInput';
+import {PreJunior} from "./preJunior/PreJunior";
+import {Junior} from "./Junior/Junior";
+import {JuniorPlus} from "./Junior+/Junior+";
+import {NavBar} from "./NavBar/NavBar";
+import {Route, HashRouter} from 'react-router-dom';
+
 
 const App = () => {
-  return (
-    <div className="App">
-      <Tasks />
-      <Affairs/>
-      <InputField/>
-    </div>
-  );
-}
-
-
-const Demonstration = () => {
     return (
-        <div className={"demonstration"}>
-            <MyButton title={"demonstration"} onClick={() => {} } styleRed={false}/>
-            <MyCheckBox checked={true} changeStatus={ () => {} }/>
-            <MyInput value={"demonstration"} KeyPress={ (e) => { }  } onChange={ () => {} } error={false}/>
-        </div>
-    )
+        <HashRouter>
+            <div className="App">
+                <NavBar/>
+                <Route path="/PreJunior" component={PreJunior}/>
+                <Route path="/Junior" component={Junior}/>
+                <Route path="/Junior+" component={JuniorPlus}/>
+                {/*<PreJunior/>*/}
+                {/*<Junior/>*/}
+                {/*<JuniorPlus/>*/}
+            </div>
+        </HashRouter>
+    );
 }
-
-
-
-
-function Tasks() {
-  return (
-    <div>
-        < Messages/>
-        <Demonstration/>
-    </div>
-  );
-}
-
 
 export default App;
