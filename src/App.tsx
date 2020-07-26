@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {PreJunior} from "./preJunior/PreJunior";
 import {Junior} from "./Junior/Junior";
-import {JuniorPlus} from "./Junior+/Junior+";
+import {JuniorPlus} from "./Junior+/JuniorPlus";
 import {NavBar} from "./NavBar/NavBar";
 import {Route, HashRouter} from 'react-router-dom';
 
@@ -15,9 +15,6 @@ const App = () => {
                 <Route path="/PreJunior" component={PreJunior}/>
                 <Route path="/Junior" component={Junior}/>
                 <Route path="/Junior+" component={JuniorPlus}/>
-                {/*<PreJunior/>*/}
-                {/*<Junior/>*/}
-                {/*<JuniorPlus/>*/}
             </div>
         </HashRouter>
     );
