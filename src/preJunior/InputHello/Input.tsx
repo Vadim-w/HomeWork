@@ -1,7 +1,7 @@
 import React, {useState, ChangeEvent, KeyboardEvent} from "react";
 import {v1} from "uuid";
-import MyInput from "../Common/Input/MyInput";
-import MyButton from "../Common/Button/MyButton";
+import MyInput from "../../Common/Input/MyInput";
+import MyButton from "../../Common/Button/MyButton";
 
 type newNames = { id: string, name: string }
 
@@ -20,7 +20,7 @@ export function InputField() {
     }
 
 
-    function onHelloInputChanget(value: string) {
+    function onHelloInputChanged(value: string) {
         setInputName(value);
         setError(false)
     }
@@ -47,7 +47,13 @@ export function InputField() {
 
     return (
         <div>
-            <MyInput value = {inputName} onChange={onHelloInputChanget} KeyPress={onHelloInputKeyPressed} error={error}/>
+            <MyInput
+                value={inputName}
+                autoFocus={false}
+                onBlur={()=>{}}
+                onChange={onHelloInputChanged}
+                KeyPress={onHelloInputKeyPressed}
+                error={error}/>
             <MyButton title={"hello"} onClick={helloInput} styleRed={false}/>
             <div> Количество пользователей: {names.length} </div>
         </div>

@@ -6,6 +6,9 @@ type inputPropsType = {
     onChange: (value: string) => void
     KeyPress: (e: KeyboardEvent<HTMLInputElement>) => void
     error: boolean
+    autoFocus: boolean
+    onBlur: () => void
+
 }
 
 const MyInput: React.FC<inputPropsType> = (props) => {
@@ -13,6 +16,8 @@ const MyInput: React.FC<inputPropsType> = (props) => {
     return(
         <div className={"myInput"}>
             <input
+                autoFocus={props.autoFocus}
+                onBlur={props.onBlur}
                 className={props.error? s.inputError : s.input}
                 type= "text"
                 value={props.value}

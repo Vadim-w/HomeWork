@@ -1,7 +1,7 @@
 import React, {ChangeEvent} from 'react';
 import {AffairsType, FilterValuesType} from "./Affairs";
-import MyButton from "../Common/Button/MyButton";
-import MyCheckBox from "../Common/CheckBox/MyCheckBox";
+import MyButton from "../../Common/Button/MyButton";
+import MyCheckBox from "../../Common/CheckBox/MyCheckBox";
 
 
 type PropsType = {
