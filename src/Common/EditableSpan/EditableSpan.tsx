@@ -1,7 +1,14 @@
-import React, {useState} from 'react';
+import React, {KeyboardEvent, useState} from 'react';
 import MyInput from "../Input/MyInput";
 
- export const EditableSpan = () => {
+type EditableSpanPropsType = {
+    value: string
+    onChange: (value: string) => void
+    onChangeSpan: () => void
+    span: string
+}
+
+ export const EditableSpan = (props: EditableSpanPropsType) => {
 
      let [editMode, setEditMode] = useState<boolean>(false);
 
@@ -13,14 +20,23 @@ import MyInput from "../Input/MyInput";
          setEditMode(false)
      }
 
+     const onChangeValue = (e: KeyboardEvent<HTMLInputElement>) => {
+         if (e.key === "Enter") {
+             props.onChangeSpan()
+             deActivatedEditMode()
+         }
+     }
+
+
+
     return (
         editMode
-            ?<MyInput value={"12"}
-                      onChange={() => {}}
-                      KeyPress={ () => {}}
+            ?<MyInput value={props.value}
+                      onChange={props.onChange}
+                      KeyPress={onChangeValue}
                       error={false}
                       onBlur={deActivatedEditMode}
                       autoFocus={true}/>
-            :<span onDoubleClick={activatedEditMode}>-text-</span>
+            :<span onDoubleClick={activatedEditMode}>{props.span}</span>
     )
 }

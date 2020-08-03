@@ -28,8 +28,6 @@ export function InputField() {
     function onHelloInputKeyPressed(e: KeyboardEvent<HTMLInputElement>) {
         if (e.key === "Enter")
             helloInput();
-
-
     }
 
     function helloInput() {
