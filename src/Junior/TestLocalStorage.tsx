@@ -13,33 +13,24 @@ export function restoreState<T>(key: string, defaultState: T) {
     return defaultState;
 }
 
-
-
 export function TestLocalStorage() {
-
-
-    let [value, setValue] = useState("");
-    let [span, setSpan] = useState("-test-");
+    let [value, setValue] = useState("test");
 
     const changeValue = (value: string) => {
         setValue(value);
     }
-    const changeSpan = () => {
-        setSpan(value)
-    }
 
     const saveValue = () => {
         saveState("span", value)
-        setSpan(value)
     }
 
     const getValue = () => {
-        setSpan(restoreState("span", "default"))
+        setValue(restoreState("span", "Save the state first"))
     }
 
     return(
         <div>
-            <EditableSpan value={value} onChange={changeValue} onChangeSpan={changeSpan} span={span}/><br/>
+            <EditableSpan value={value}  onChange={changeValue} /><br/>
             <MyButton title={"Save value"} onClick={saveValue} styleRed={false}/>
             <MyButton title={"Get value"} onClick={getValue} styleRed={false}/>
         </div>

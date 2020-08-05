@@ -21,7 +21,7 @@ const MyInput: React.FC<inputPropsType> = (props) => {
                 className={props.error? s.inputError : s.input}
                 type= "text"
                 value={props.value}
-                onChange={(e)=> props.onChange(e.currentTarget.value)}
+                onChange={(e) => props.onChange(e.currentTarget.value)}
                 onKeyPress={props.KeyPress}/>
         </div>
     )
