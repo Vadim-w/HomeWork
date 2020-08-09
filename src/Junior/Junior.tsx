@@ -15,7 +15,8 @@ export const Junior = () => {
         {title: "John", value: "3"},
         {title: "Jek", value: "4"},
         {title: "Ivan", value: "5"},
-        {title: "Lisa", value: "6"}
+        {title: "Lisa", value: "6"},
+        {title: "Lisa", value: "7"}
     ]
 
     function onChangeValue(value: string) {
