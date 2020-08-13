@@ -35,7 +35,6 @@ export function Todolist(props: PropsType ){
                     }
                     return (
                         <li key={t.id} className={"liTodo"}>
-                            {/*<input type="checkbox" checked={t.p}/>*/}
                             <MyCheckBox checked={t.p} changeStatus={changeStatus}/>
 
                             <span>{t.title}</span>

@@ -3,7 +3,8 @@
     margin: 50px auto;
     position: relative;
     width: 205px;
-    height: 405px;
+    max-height: 300px;
+    min-height: 300px;
 }
 .select:focus{outline:0}
 
