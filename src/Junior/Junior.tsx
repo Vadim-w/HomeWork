@@ -4,6 +4,7 @@ import {EditableSpan} from '../Common/EditableSpan/EditableSpan';
 import {TestLocalStorage} from "./TestLocalStorage";
 import {Select} from "../Common/Select/Select";
 import {Radio} from "../Common/Radio/Radio";
+import {SortingPeople} from "./SortingPeople/SortingPeople";
 
 export const Junior = () => {
     let [value, setValue] = useState("text");
@@ -59,6 +60,7 @@ export const Junior = () => {
             <TestLocalStorage/>
             <Select value={valueSelect} items={items} onChange={onChangeValueSelect}/>
             <Radio items={itemsRadio} onChange={onChangeRadio} name={"users"} value={valueRadio}/>
+            <SortingPeople/>
         </div>
     )
 }
