@@ -5,6 +5,7 @@ import {TestLocalStorage} from "./TestLocalStorage";
 import {Select} from "../Common/Select/Select";
 import {Radio} from "../Common/Radio/Radio";
 import {SortingPeople} from "./SortingPeople/SortingPeople";
+import {Date} from "./Date/Date";
 
 export const Junior = () => {
     let [value, setValue] = useState("text");
@@ -44,11 +45,6 @@ export const Junior = () => {
 
     const onChangeRadio = (id: string, value: number) => {
         setValueRadio(value)
-        /*let item = itemsRadio.find(i => i.value === value);
-        if (item) {
-           item.value = value
-            setItemsRadio([...itemsRadio])
-        }*/
     }
 
     return (
@@ -61,6 +57,7 @@ export const Junior = () => {
             <Select value={valueSelect} items={items} onChange={onChangeValueSelect}/>
             <Radio items={itemsRadio} onChange={onChangeRadio} name={"users"} value={valueRadio}/>
             <SortingPeople/>
+            <Date/>
         </div>
     )
 }

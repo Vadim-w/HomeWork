@@ -1,0 +1,31 @@
+
+.dateBlock {
+    margin-bottom: 200px;
+    width: auto;
+}
+
+.dateOffHover {
+    opacity: 0;
+    width: 180px;
+    height: 40px;
+    padding: 1px 10px 1px 10px;
+    position: relative;
+    background-color: gold;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,10);
+    z-index: 1;
+}
+
+.dateOnHover {
+    width: 180px;
+    height: 40px;
+    padding: 1px 10px 1px 10px;
+    position: relative;
+    background-color: gold;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,10);
+    z-index: 1;
+}
+
+
+
