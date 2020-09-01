@@ -3,3 +3,9 @@
     text-align: center;
     font-size: 30px;
 }
+
+.preloader {
+   width: 500px;
+   height: 500px;
+    margin: 0 auto;
+}

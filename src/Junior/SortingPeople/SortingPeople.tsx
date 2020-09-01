@@ -8,7 +8,7 @@ import {
     sortMajorityAC,
     sortUpAC,
     StateType
-} from "../../homeWorkReducer/HomeWorkReducer";
+} from "../../redux/homeWorkReducer/HomeWorkReducer";
 import {v1} from "uuid";
 
 export const SortingPeople = () => {

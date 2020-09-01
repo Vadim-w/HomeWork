@@ -6,8 +6,15 @@ import {Select} from "../Common/Select/Select";
 import {Radio} from "../Common/Radio/Radio";
 import {SortingPeople} from "./SortingPeople/SortingPeople";
 import {Date} from "./Date/Date";
+import {Preloader} from "../Common/Preloader/Preloader";
+import MyButton from "../Common/Button/MyButton";
 
-export const Junior = () => {
+type juniorPropsType = {
+    loading: boolean
+    setLoading: (loading: boolean) => void
+}
+
+export const Junior = (props: juniorPropsType) => {
     let [value, setValue] = useState("text");
     let [selectCollapsed, setSelectCollapsed] = useState<boolean>(true)
     let [valueSelect, setValueSelect] = useState("1")
@@ -31,6 +38,7 @@ export const Junior = () => {
         setValueSelect(value)
         setSelectCollapsed(!selectCollapsed)
     }
+
     //Radio==============
     const itemsRadio = [
         {name: "Anna", id: "1", value: 1},
@@ -47,6 +55,21 @@ export const Junior = () => {
         setValueRadio(value)
     }
 
+    const offPreloader = () => {
+        props.setLoading(false)
+    }
+
+    const onPreloader = () => {
+        props.setLoading(true)
+        setTimeout(offPreloader, 3000)
+    }
+
+    if (props.loading) {
+        return (
+            <div className={s.preloader}>
+                <Preloader/>
+            </div>)
+    }
     return (
         <div className={s.title}>
             <h2>Junior</h2>
@@ -58,6 +81,10 @@ export const Junior = () => {
             <Radio items={itemsRadio} onChange={onChangeRadio} name={"users"} value={valueRadio}/>
             <SortingPeople/>
             <Date/>
+            <MyButton title={"setPreloader"} onClick={onPreloader} styleRed={true}/>
         </div>
     )
+
+
 }
+

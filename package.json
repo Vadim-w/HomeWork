@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "csscomb": "^4.3.0"
   }
 }

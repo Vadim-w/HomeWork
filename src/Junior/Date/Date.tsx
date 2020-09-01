@@ -19,7 +19,6 @@ export const Date = () => {
         clearInterval(timerId)
     }
     const onHoverDate = () => {
-        console.log("lalala")
         setStyleHoverDate(styles.dateOnHover)
     }
     const offHoverDate = () => {
