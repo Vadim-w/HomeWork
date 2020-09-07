@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import s from './MyCheckBox.module.css'
 
 type myCheckBoxType = {
@@ -6,7 +6,7 @@ type myCheckBoxType = {
     changeStatus: (checked: boolean) => void
 }
 
-const MyCheckBox: React.FC<myCheckBoxType> = (props) => {
+const MyCheckBox: React.FC<myCheckBoxType> = React.memo((props) => {
     return (
         <label className={s.label}>
             <input type="checkbox"
@@ -18,6 +18,6 @@ const MyCheckBox: React.FC<myCheckBoxType> = (props) => {
         </label>
 
     )
-}
+})
 
 export default MyCheckBox;

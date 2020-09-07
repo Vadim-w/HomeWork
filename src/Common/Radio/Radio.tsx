@@ -9,15 +9,12 @@ type itemType = {
 
 type RadioPropsType = {
     items: Array<itemType>
-    // name: string
-    // value: any
-    //onChange:((event: ChangeEvent<HTMLInputElement>) => void)
     onChange: (id: string, value: number) => void
     name: string
     value: number
 }
 
-export const Radio = (props: RadioPropsType) => {
+export const Radio = React.memo((props: RadioPropsType) => {
     return (
         <div className={styles.block_radio}>
             {props.items.map(i => <div>
@@ -31,4 +28,4 @@ export const Radio = (props: RadioPropsType) => {
 
         </div>
     )
-}
+})

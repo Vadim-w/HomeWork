@@ -9,10 +9,10 @@ import s from "./MyButton.module.css"
 
 
 
-const MyButton:React.FC<typeMyButton> = (props) => {
+const MyButton:React.FC<typeMyButton> = React.memo((props) => {
     return (
             <button onClick={props.onClick} className={props.styleRed? s.buttonRed : s.button}>{props.title}</button>
     )
-}
+})
 
 export default MyButton;

@@ -8,10 +8,18 @@ import {SortingPeople} from "./SortingPeople/SortingPeople";
 import {Date} from "./Date/Date";
 import {Preloader} from "../Common/Preloader/Preloader";
 import MyButton from "../Common/Button/MyButton";
+import {Range} from "../Common/Range/Range";
+import {PriceSetting} from "../Common/PriceSetting/PriceSetting";
 
 type juniorPropsType = {
     loading: boolean
     setLoading: (loading: boolean) => void
+    rangeValue: string
+    setRangeValue: (value: string) => void
+    maxPrice: string
+    minPrice: string
+    setMinPrice: (value: string) => void
+    setMaxPrice: (value: string) => void
 }
 
 export const Junior = (props: juniorPropsType) => {
@@ -82,6 +90,14 @@ export const Junior = (props: juniorPropsType) => {
             <SortingPeople/>
             <Date/>
             <MyButton title={"setPreloader"} onClick={onPreloader} styleRed={true}/>
+            <Range title={"Value"} rangeValue={props.rangeValue}  minValue={0} maxValue={99} setRangeValue={props.setRangeValue}/>
+            <hr/>
+            <PriceSetting
+                maxPrice={props.maxPrice}
+                minPrice={props.minPrice}
+                setMaxPrice={props.setMaxPrice}
+                setMinPrice={props.setMinPrice}
+            />
         </div>
     )
 

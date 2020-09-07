@@ -1,4 +1,4 @@
-import React, {ChangeEvent, KeyboardEvent} from 'react';
+import React, {KeyboardEvent} from 'react';
 import s from './MyInput.module.css'
 
 type inputPropsType = {
@@ -11,7 +11,7 @@ type inputPropsType = {
 
 }
 
-const MyInput: React.FC<inputPropsType> = (props) => {
+const MyInput: React.FC<inputPropsType> = React.memo((props) => {
 
     return(
         <div className={"myInput"}>
@@ -25,6 +25,6 @@ const MyInput: React.FC<inputPropsType> = (props) => {
                 onKeyPress={props.KeyPress}/>
         </div>
     )
-}
+})
 
 export default MyInput;
