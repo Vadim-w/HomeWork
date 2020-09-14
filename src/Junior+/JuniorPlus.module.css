@@ -1,6 +1,38 @@
 
+.JuniorPlusRed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: indianred;
+    font-family: "Sitka Subheading" ;
+}
+.JuniorPlusBlue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: lightblue;
+    font-family: "Microsoft YaHei Light";
+}
+.JuniorPlusGreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: #66bf3c;
+    font-family: Cambria;
+}
 
 .titleJunior {
     text-align: center;
     font-size: 30px;
 }
+.themeBlock {
+    margin: 20px;
+    width: 250px;
+}
+

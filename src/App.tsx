@@ -10,7 +10,7 @@ import JuniorContainer from "./Junior/JuniorContainer";
 const App = () => {
     return (
         <HashRouter>
-            <div className="App">
+            <div>
                 <NavBar/>
                 <Route path="/PreJunior" component={PreJunior}/>
                 <Route path="/Junior" component={JuniorContainer}/>

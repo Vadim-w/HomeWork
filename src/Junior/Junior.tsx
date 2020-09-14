@@ -49,17 +49,17 @@ export const Junior = (props: juniorPropsType) => {
 
     //Radio==============
     const itemsRadio = [
-        {name: "Anna", id: "1", value: 1},
-        {name: "Andrey", id: "2", value: 2},
-        {name: "John", id: "3", value: 3},
-        {name: "Jek", id: "4", value: 4},
-        {name: "Ivan", id: "5", value: 5},
-        {name: "Lisa", id: "6", value: 6},
+        {name: "Anna", id: "1", value: "1"},
+        {name: "Andrey", id: "2", value: "2"},
+        {name: "John", id: "3", value: "3"},
+        {name: "Jek", id: "4", value: "4"},
+        {name: "Ivan", id: "5", value: "5"},
+        {name: "Lisa", id: "6", value: "6"},
     ]
 
-    const [valueRadio, setValueRadio] = useState(2)
+    const [valueRadio, setValueRadio] = useState("2")
 
-    const onChangeRadio = (id: string, value: number) => {
+    const onChangeRadio = (value: string) => {
         setValueRadio(value)
     }
 
