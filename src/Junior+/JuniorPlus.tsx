@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../redux/store";
 import {Radio} from "../Common/Radio/Radio";
 import {setPageThemeAC} from "../redux/pageThemeReducer/pageThemeReducer";
+import {Request} from "./Request/Request";
 
 export const JuniorPlus = () => {
     let theme = useSelector<RootState, string>( (state) => state.pageTheme.theme)
@@ -38,6 +39,7 @@ export const JuniorPlus = () => {
             <div className={styles.themeBlock}>
                 <Radio items={items} onChange={changePageTheme} name={"Theme"} value={theme}/>
             </div>
+            <Request/>
         </div>
     )
 }

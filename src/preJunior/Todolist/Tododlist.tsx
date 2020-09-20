@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import {AffairsType, FilterValuesType} from "./Affairs";
 import MyButton from "../../Common/Button/MyButton";
 import MyCheckBox from "../../Common/CheckBox/MyCheckBox";
@@ -30,8 +30,7 @@ export function Todolist(props: PropsType ){
                 {props.tasks.map((t)=>{
                     let deleteClick = () =>{props.removeTasks(t.id)}
                     let changeStatus = (checked: boolean) => {
-                        let newCheckBoxValue = checked;
-                        props.changeStatus(t.id, newCheckBoxValue)
+                        props.changeStatus(t.id, checked)
                     }
                     return (
                         <li key={t.id} className={"liTodo"}>
