@@ -16,7 +16,6 @@ export const JuniorPlus = () => {
     ]
 
     const changePageTheme = (theme: string) => {
-        debugger
         dispatch(setPageThemeAC(theme))
     }
     const style = () => {

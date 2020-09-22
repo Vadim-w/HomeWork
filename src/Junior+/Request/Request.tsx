@@ -14,7 +14,7 @@ export const Request = () => {
                 setResponse(response.data)
             })
             .catch(error => {
-                setResponse(error)
+                setResponse(error.message)
             });
     }
     const changeSuccess = (checked: boolean) => {
